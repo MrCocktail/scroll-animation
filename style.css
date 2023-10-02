@@ -1,0 +1,192 @@
+body {
+  overflow-x: hidden;
+}
+#navbar {
+  transform: translateY(-200px);
+  transition: transform 3s ease;
+}
+.content {
+  overflow: hidden;
+}
+.hero-description {
+  transform: translateY(-180px);
+}
+.button-container {
+  overflow: hidden;
+  z-index: -1;
+  height: 100px !important;
+}
+.button-box {
+  overflow: hidden;
+  transform: translateY(-100px);
+  opacity: 0;
+  z-index: -1;
+}
+.img-1, .img-2 {
+  opacity: 0.3;
+}
+#partners {
+  transform: translateX(-100%);
+  opacity: .2;
+  transition: opacity 0.5s ease-in-out;
+}
+.date {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+.translateSec {
+  transform: translateX(0);
+}
+#partners h6 {
+  transform-style: preserve-3d;
+  transform: rotateX(70deg);
+  opacity: .5;
+  transition: opacity 0.5s ease;
+}
+#reservation {
+  overflow: hidden;
+
+}
+div.wrap {
+  flex-wrap: wrap !important;
+}
+.char {
+  transform: translateY(-400px);
+  transition: transform 0.5s;
+}
+p.replaced-text {
+  will-change: transform;
+  position: relative;
+}
+.notShowed {
+  opacity: 0;
+  display: none;
+}
+p.labels {
+  display: none;
+  opacity: 0;
+  transform: scale(0);
+}
+@keyframes reveal {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+p.labels.isShow {
+  display: block;
+  opacity: 0;
+  transform-origin: left;
+  transform: scale(1);
+  transition: all 1.5s ease-in;
+  animation: reveal 1.5s ease;
+}
+p.replaced-text::before {
+  /* content: attr(data-content); */
+  width: 0;
+  height: 30px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: black;
+  background: white;
+  border-right: 2px solid black;
+  animation: typing 5s steps(50) forwards;
+}
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes typing {
+  100% {
+    width: 100%;
+  }
+}
+.tickets a {
+  --border-size: -1px;
+  --border-angle: 0turn;
+  overflow: visible;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 50%,
+      #213
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  animation: bg-spin 2s linear infinite;
+  
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+.visible, .invisible {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.visible {
+  opacity: 1;
+}
+.miss {
+  margin-left: 250px;
+
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: transparent;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #000, #666, #000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: smoke 5s linear infinite;
+}
+
+@keyframes smoke {
+  0% {
+      background-position: -200% 0;
+  }
+  100% {
+      background-position: 200% 0;
+  }
+}
+footer {
+  overflow-y: hidden;
+}
+div.foot {
+  overflow: hidden;
+}
+ul.footer-links  {
+  transform: translateY(-200%);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.socials-icon1, .socials-icon2, .socials-icon3 {
+  transform: scale(.5);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
